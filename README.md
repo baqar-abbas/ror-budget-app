@@ -4,7 +4,7 @@
 
 | Project Page |
 |---------------------------------------|
-|![image](https://github.com/baqar-abbas/ror-budget-app/assets/app.jpg)|
+|<img src="app.jpg" alt="logo" width="140"  height="auto" />|
 
 
 <a name="readme-top"></a>
