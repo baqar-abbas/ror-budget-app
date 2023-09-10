@@ -3,7 +3,7 @@
 > # Budget Application
 <div align="center">
 <h1><b> Ruby on Rails Budget App</b></h1>
-<img src="app.JPG" alt="logo" width="240"  height="300" />
+<img src="app.JPG" alt="logo" width="340"  height="350" />
 </div>
 
 <a name="readme-top"></a>
@@ -74,7 +74,7 @@
 
 | Implemented Schema's ERD |
 |---------------------------------------|
-<img src="erd.JPG" alt="logo" width="240"  height="300" />
+<img src="erd.JPG" alt="logo" width="540"  height="700" />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
