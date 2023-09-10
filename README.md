@@ -4,7 +4,7 @@
 
 | Project Page |
 |---------------------------------------|
-|<img src="app.jpg" alt="logo" width="140"  height="auto" />|
+<img src="app.JPG" alt="logo" width="140"  height="auto" />
 
 
 <a name="readme-top"></a>
