@@ -2,8 +2,7 @@
 
 > # Budget Application
 <div align="center">
-| Project Page |
-|---------------------------------------|
+<h1><b> Ruby on Rails Budget App</b></h1>
 <img src="app.JPG" alt="logo" width="240"  height="300" />
 </div>
 
