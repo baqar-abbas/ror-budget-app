@@ -1,11 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 > # Budget Application
-
+<div align="center">
 | Project Page |
 |---------------------------------------|
-<img src="app.JPG" alt="logo" width="140"  height="auto" />
-
+<img src="app.JPG" alt="logo" width="240"  height="300" />
+</div>
 
 <a name="readme-top"></a>
 
@@ -75,7 +75,7 @@
 
 | Implemented Schema's ERD |
 |---------------------------------------|
-|![budget_erd_1_member](app/assets/images/erd.jpg)|
+<img src="erd.JPG" alt="logo" width="240"  height="300" />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
