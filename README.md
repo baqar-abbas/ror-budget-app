@@ -75,7 +75,7 @@
 
 | Implemented Schema's ERD |
 |---------------------------------------|
-|![budget_erd_1_member](https://github.com/baqar-abbas/ror-budget-app/tree/setup-project/app/assets/images/erd.JPG)|
+|![budget_erd_1_member](app/assets/images/erd.jpg)|
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
