@@ -65,6 +65,6 @@ class JoinsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def join_params
-      params.fetch(:join, {})
+      params.require(:join).permit(:category_id, :expense_id)
     end
 end
