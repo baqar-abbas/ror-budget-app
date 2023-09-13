@@ -306,7 +306,7 @@
   }
   
   .alert-info {
-    color: var(--second);
+    color: var(--text);
     text-align: center;
     padding: 1rem;
     margin: 1rem;
@@ -452,4 +452,100 @@
     justify-content: center;
     padding-bottom: 3rem;
   }
+
+  /* newly added  */
+.category-image {
+  width: 100px;
+  height: 38px;
+}
+
+.welcome-screen-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.welcome-login {
+  color: #f7f8fd;
+  text-align: center;
+  background-color: #3778c2;
+  padding: 15px 25px;
+  font-weight: 200;
+  width: 90%;
+}
+
+.welcome-login:hover {
+  background-color: #3789c7;
+  color: #f7f8fd;
+}
+
+.welcome-signup {
+  color: #37373a;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 15px 25px;
+  font-weight: 200;
+  width: 90%;
+}
+
+.welcome-signup:hover {
+  background-color: #3778c2;
+  color: #f7f8fd;
+}
+
+.welcome-heading {
+  text-align: center;
+}
+
+.login-heading {
+  /* color: var(--text); */
+  position: absolute;
+  top: 7%;  
+}
+
+.checkbox {
+  position: relative;
+  top: 1.5rem;
+}
+
+.login .login-page-btn {
+  background-color: #3778c2;
+}
+
+.login .login-page-btn:hover,
+.login-page-signup-btn:hover {
+  background-color: #3789c7;
+  color: #f7f8fd;
+}
+
+.login-page-signup-btn {
+  background-color: transparent;
+  color:#434b54;
+}
+
+.forgot-password {
+  color: blue;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.forgot-password:hover {
+  background-color: #3789c7;
+  color: #f7f8fd;
+}
+
+.signup-heading {
+  position: absolute;
+  top: 7%;
+}
+
+.forgot-heading {
+  color: var(--text);
+}
   
