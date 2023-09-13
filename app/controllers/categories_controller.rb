@@ -4,8 +4,13 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    # @categories = Category.all
     # @categories = Category.where(user_id: current_user.id)
+    if user_signed_in?
+      @categories = Category.where(user_id: current_user.id)
+    else
+      @categories = Category.all
+    end
   end
 
   # GET /categories/1 or /categories/1.json

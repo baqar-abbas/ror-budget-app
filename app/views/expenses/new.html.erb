@@ -1,5 +1,6 @@
+<h2 class="transaction-heading">TRANSACTIONS</h2>
 <div class="page-header">
-  <h2>New expense of  <b class="cat-name"><%=@category.name%></b></h2>
+  <h2 class="categories-heading">New expense of  <b class="cat-name"><%=@category.name%></b></h2>
 </div>
 
 <%= render "form", expense: @expense %>
@@ -7,5 +8,5 @@
 <br>
 
 <div>
-    <%= link_to "Back to expenses", user_category_expenses_path(current_user, @category) %>
+    <%= link_to "Back to expenses", user_category_expenses_path(current_user, @category), class: 'back-to-category' %>
 </div>

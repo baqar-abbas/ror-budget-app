@@ -45,7 +45,7 @@
   
   .list-cat li {
     display: block;
-    background-color: rgb(112, 49, 49);
+    background-color: rgb(54, 52, 52);
     font-size: larger;
     height: 3rem;
     width: 100%;
@@ -535,7 +535,8 @@
   font-weight: 400;
 }
 
-.forgot-password:hover {
+.forgot-password:hover,
+.create-one:hover {
   background-color: #3789c7;
   color: #f7f8fd;
 }
@@ -545,7 +546,37 @@
   top: 7%;
 }
 
-.forgot-heading {
+.forgot-heading,
+.categories-heading,
+.back-to-category {
   color: var(--text);
 }
-  
+
+.create-one {
+  color: #f7f8fd;
+  background-color: #3778c2;
+}
+
+.bottom-div {
+  display: flex;
+  justify-content: center;
+  background-color: #5fb523;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+.bottom-button {
+  border: 2px solid white;
+  text-align: center;
+  padding: 15px 25px;
+  font-weight: 400;
+  width: 90%;
+}
+
+.transaction-heading {
+  position: absolute;
+  top: 7%;
+}

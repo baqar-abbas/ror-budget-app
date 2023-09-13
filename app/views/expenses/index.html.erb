@@ -1,6 +1,7 @@
-<p style="color: green"><%= notice %></p>
+<%# < style="color: green"><%= notice %>
+<h2 class="transaction-heading">TRANSACTIONS</h2>
 <div class="page-header">
-  <h2>Expenses of <b class="cat-name"><%=@category.name%></b></h2>
+  <h2 class="categories-heading">Expenses of <b class="cat-name"><%=@category.name%></b></h2>
 </div>
 
 <h3>
@@ -17,6 +18,9 @@
 </div>
 
 <div class="links-cat">
-  <%= link_to "New expense", new_user_category_expense_path(current_user, @category) %>
-  <%= link_to "Back to Category", user_categories_path(current_user) %>
+  <%= link_to "Back to Category", user_categories_path(current_user), class: 'back-to-category' %>
+</div>
+
+<div class="bottom-div">
+<%= link_to "NEW EXPENSE", new_user_category_expense_path(current_user, @category), class: 'bottom-button' %>
 </div>

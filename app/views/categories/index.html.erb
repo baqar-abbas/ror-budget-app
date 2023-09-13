@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <div class="page-header">
-    <h2>Categories</h2>
+    <h2 class="categories-heading">Categories</h2>
   </div>
   <%# <p style="color: green"><%# notice %>
   <div id="categories" class="categories">
@@ -8,7 +8,14 @@
       <ul class="list-cat">
         <% @categories.each do |category| %>
           <li>
-            <%= category.icon %>
+            <%# category.icon %>
+  <% if category.icon.present? && category.icon =~ /\.(png|jpg|jpeg|gif)\z/i %>
+  <%= image_tag(category.icon, alt: category.name, class: 'category-image') %>
+  <% else %>
+  <%# fa_icon 'fas fa-question-circle', class: 'category-image' %>
+  <%# <i class="fas fa-question-circle category-image"></i> %>
+  <%= image_tag('budget.png', alt: category.name, class: 'category-image') %>
+  <% end %>
           </li>
           <li>
              <%= link_to category.name, user_category_expenses_path(current_user, category) %>
@@ -17,11 +24,12 @@
         
       </ul>
     <% else %>
-      <p>No categories yet. <%= link_to "Create one", new_user_category_path(current_user) %></p>
+      <p>No categories yet? <%= link_to "Create one", new_user_category_path(current_user), class: 'create-one' %></p>
     <% end %>
   </div>
-
-  <%= link_to "New category", new_user_category_path(current_user) %>
+  <div class="bottom-div">
+  <%= link_to "NEW CATEGORY", new_user_category_path(current_user), class: 'bottom-button' %>
+  </div>
 <% else %>
   <div>
     <h3 class="alert-msg">You are not signed in</h3>

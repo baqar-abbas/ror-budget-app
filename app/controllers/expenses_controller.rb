@@ -29,7 +29,6 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: "Expense was successfully created." }
         @expense.categories << @category
         format.html do
           redirect_to user_category_expenses_path(current_user, @category), notice: 'Expense was successfully created.'

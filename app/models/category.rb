@@ -3,7 +3,7 @@ class Category < ApplicationRecord
     has_many :joins, dependent: :destroy
     has_many :expenses, through: :joins
   
-    validates :name, :icon, presence: true, length: { maximum: 50 }
+    validates :name, :icon, presence: true, length: { maximum: 100 }
   
     def total_expenses(user)
       expenses.where(user_id: user.id).sum(:amount)

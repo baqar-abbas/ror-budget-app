@@ -1,7 +1,5 @@
-<h1>New category</h1>
-
 <div class="page-header">
-  <h2>New category</h2>
+  <h2 class="categories-heading">New category</h2>
 </div>
 
 <%= render "form", category: @category %>
@@ -9,5 +7,5 @@
 <br>
 
 <div>
-  <%= link_to "Back to categories", user_categories_path(current_user) %>
+  <%= link_to "Back to categories", user_categories_path(current_user), class: 'create-one' %>
 </div>
