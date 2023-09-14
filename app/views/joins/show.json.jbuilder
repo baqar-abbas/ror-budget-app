@@ -1,1 +1,1 @@
-json.partial! "joins/join", join: @join
+json.partial! 'joins/join', join: @join

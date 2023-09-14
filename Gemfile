@@ -33,7 +33,7 @@ gem 'jbuilder'
 # devise setup
 gem 'devise'
 
-#Authorization with cancancan
+# Authorization with cancancan
 gem 'cancancan'
 
 gem 'font-awesome-sass'
