@@ -43,7 +43,6 @@
   <ul>
     <li><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
     <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
-    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
   </ul>
 </details>
 
@@ -62,13 +61,17 @@
   </ul>
 </details>
 
+## [live demo](https://budget-app-4jsc.onrender.com)
+
+## [Video Presentation](https://drive.google.com/file/d/15O7UE9izjU28MHjvxNHFxIOXfN66KSR7/view?usp=sharing)
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add Payment type]**
-- **[List all Payment type]**
-- **[Make Payment]**
+- **[Add Category type]**
+- **[List all category type]**
+- **[Add Transactions ]**
 - **[List of all Transaction]**
 - **[Total Transaction amount]**
 
