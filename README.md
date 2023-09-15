@@ -177,7 +177,9 @@ To run tests, run the following command:
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-  First, I would like to thank Microverse and my coding partners.
+  Original design idea by Gregoire Vella on Behance Thanks to him for making such an amazing design.
+  I would like to thank Microverse for providing the reading materials that helped me during the project development.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
