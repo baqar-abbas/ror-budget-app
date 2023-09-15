@@ -36,8 +36,6 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   describe 'POST #create' do
-    
-
     it 'creates a new category for a user' do
       user = User.create(
         name: 'User Name',
@@ -45,20 +43,20 @@ RSpec.describe CategoriesController, type: :controller do
         password: 'password'
       )
       sign_in user
-    
+
       # Define the category attributes you want to create
       category_params = {
         name: 'New Category',
         icon: 'fa-utensils',
         user_id: user.id
       }
-    
+
       # Make a POST request to create a new category for the user
       post :create, params: { user_id: user.id, category: category_params }
-    
+
       # Expect that the category was created successfully
-      expected_url = user_category_path(user, assigns(:category)) + ".82"
-      expect(response.location).not_to include(".82")
+      user_category_path(user, assigns(:category))
+      expect(response.location).not_to include('.82')
 
       expect(assigns(:category)).to be_a(Category)
 

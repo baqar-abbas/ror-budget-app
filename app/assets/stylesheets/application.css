@@ -123,8 +123,6 @@ a {
   padding: 0.5rem;
   border: none;
   color: var(--light);
-
-  /* border-radius: none; */
   cursor: pointer;
 }
 
@@ -505,7 +503,6 @@ form label {
 }
 
 .login-heading {
-  /* color: var(--text); */
   position: absolute;
   top: 7%;
 }
