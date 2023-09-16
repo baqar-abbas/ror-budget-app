@@ -1,0 +1,25 @@
+<h2 class="transaction-heading">TRANSACTIONS</h2>
+<div class="page-header">
+  <h2 class="categories-heading">Expenses of <b class="cat-name"><%=@category.name%></b></h2>
+</div>
+
+<h3>
+  Total expenses: <%= @category.total_expenses(current_user).round(2) %>
+</h3>
+
+<div id="expenses" class="expenses">
+  <% @expenses.each do |expense| %>
+    <ul class="explist">
+      <li> <%= expense.name %> </li>
+      <li> <%= expense.amount %> </li>
+    </ul>
+  <% end %>
+</div>
+
+<div class="links-cat">
+  <%= link_to "Back to Category", user_categories_path(current_user), class: 'back-to-category' %>
+</div>
+
+<div class="bottom-div">
+<%= link_to "NEW EXPENSE", new_user_category_expense_path(current_user, @category), class: 'bottom-button' %>
+</div>

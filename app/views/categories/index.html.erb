@@ -1,0 +1,40 @@
+<% if user_signed_in? %>
+  <div class="page-header">
+    <h2 class="categories-heading">Categories</h2>
+  </div>
+  <div id="categories" class="categories">
+    <% if @categories.any? %>
+      <ul class="list-cat">
+        <% @categories.each do |category| %>
+          <li>
+  <% if category.icon.present? && category.icon =~ /\.(png|jpg|jpeg|gif)\z/i %>
+  <%= image_tag(category.icon, alt: category.name, class: 'category-image') %>
+  <% else %>
+  <%= image_tag('budget.png', alt: category.name, class: 'category-image') %>
+  <% end %>
+          </li>
+          <li>
+             <%= link_to category.name, user_category_expenses_path(current_user, category) %>
+          </li>
+        <% end %>
+        
+      </ul>
+    <% else %>
+      <p>No categories yet? <%= link_to "Create one", new_user_category_path(current_user), class: 'create-one' %></p>
+    <% end %>
+  </div>
+  <div class="bottom-div">
+  <%= link_to "NEW CATEGORY", new_user_category_path(current_user), class: 'bottom-button' %>
+  </div>
+<% else %>
+  <div>
+    <h3 class="alert-msg">You are not signed in</h3>
+    <p class="alert-info">You need to Sign in to see your categories or Sign up if you don't have an account yet.</p>
+    <h1 class="welcome-heading">Budget App</h1>
+  </div>
+  <div class="welcome-screen-links">
+  <%= link_to "LOG IN", new_user_session_path, class: 'welcome-login' %>
+  <br><br>
+  <%= link_to  "SIGN UP", new_user_registration_path, class: 'welcome-signup' %>
+  </div>
+<% end %>
