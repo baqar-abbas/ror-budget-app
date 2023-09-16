@@ -16,15 +16,22 @@
     <%= form.text_field :name %>
   </div>
 
-  <div>
+  <di>
     <%= form.label :amount, style: "display: block" %>
     <%= form.text_field :amount %>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id, value: current_user.id %>
+  <%# <div>
+    <%# form.label :user_id, style: "display: block" %>
+    <%# form.text_field :user_id, value: current_user.id %>
+  
+  <div class="form-group custom-dropdown">
+  <label for="category-select" class="control-label">Select Category</label>
+  <div class="options">
+<%= select_tag 'expense[category_ids]', options_for_select(@categories.map { |g| [g.name, g.id] }, @expense.category_ids), id: 'category_select', class: "form-control", multiple: true %>
   </div>
+</div>
+
 
   <div>
     <%= form.submit %>
