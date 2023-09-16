@@ -28,13 +28,14 @@ class ExpensesController < ApplicationController
     @expense = @category.expenses.new(expense_params.merge(user_id: current_user.id))
     # @category = Category.find(params[:category_id])
     # @categories = current_user.categories
-    selected_category_id = params[:expense][:category_ids]
+    # selected_category_id = params[:expense][:category_ids]
 
     respond_to do |format|
       if @expense.save
-        # @expense.categories << @selected_category_id
+        # @expense.categories << selected_category_id
+        # @expense.categories << Category.where(id: expense_params[:category_ids].reject(&:blank?))
         format.html do
-          redirect_to user_category_expenses_path(selected_category_id), notice: 'Expense was successfully created.'
+          redirect_to user_category_expenses_path(params[:category_id]), notice: 'Expense was successfully created.'
         end
         format.json { render :show, status: :created, location: @expense }
       else

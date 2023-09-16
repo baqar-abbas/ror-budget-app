@@ -18,7 +18,7 @@ Rails.application.configure do
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
-  # config.require_master_key = true
+  config.require_master_key = true
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
@@ -71,6 +71,8 @@ Rails.application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
+
+  config.secret_key_base = 'efe5ecdec0b75e4c838d31c9c7718f9cd92936d9f27404f6e182888f52500592b142caf6683490b244a2c7f389dc0cd4bee129e3b8c7455e95b7351025c4a996'
 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false

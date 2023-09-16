@@ -28,7 +28,8 @@
   <div class="form-group custom-dropdown">
   <label for="category-select" class="control-label">Select Category</label>
   <div class="options">
-<%= select_tag 'expense[category_ids]', options_for_select(@categories.map { |g| [g.name, g.id] }, @expense.category_ids), id: 'category_select', class: "form-control", multiple: true %>
+
+<%= form.collection_select :category_ids, current_user.categories, :id, :name, {}, { multiple: true, class: 'form-select', required: true, aria_label: "Disabled select example" } %>
   </div>
 </div>
 
