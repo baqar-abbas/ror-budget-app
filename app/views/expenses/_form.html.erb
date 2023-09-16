@@ -21,10 +21,12 @@
     <%= form.text_field :amount %>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id, value: current_user.id %>
+  <div class="form-group custom-dropdown">
+  <label for="category-select" class="control-label">Select Category</label>
+  <div class="options">
+<%= form.collection_select :category_ids, current_user.categories, :id, :name, {}, { multiple: true, class: 'form-select', required: true, aria_label: "Disabled select example" } %>
   </div>
+</div>
 
   <div>
     <%= form.submit %>

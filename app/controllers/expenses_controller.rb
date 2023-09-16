@@ -1,5 +1,6 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: %i[show edit update destroy]
+  before_action :set_category
 
   # GET /expenses or /expenses.json
   def index
@@ -13,7 +14,8 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = Expense.new
-    @category = Category.find(params[:category_id])
+    # @category = Category.find(params[:category_id])
+    @categories = current_user.categories
   end
 
   # GET /expenses/1/edit
@@ -21,15 +23,19 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @expense = Expense.new(expense_params)
-    @expense.user = current_user
-    @category = Category.find(params[:category_id])
+    # @expense = Expense.new(expense_params)
+    # @expense.user = current_user
+    # @category = Category.find(params[:category_id])
+    @expense = @category.expenses.new(expense_params.merge(user_id: current_user.id))
+    # selected_category_id = params[:expense][:category_ids]
 
     respond_to do |format|
       if @expense.save
         @expense.categories << @category
         format.html do
-          redirect_to user_category_expenses_path(current_user, @category), notice: 'Expense was successfully created.'
+          # redirect_to user_category_expenses_path(current_user, @category), notice: 'Expense was successfully created.'
+          # redirect_to user_category_expenses_path(selected_category_id), notice: 'Expense was successfully created.'
+          redirect_to user_category_expenses_path(params[:category_id]), notice: 'Expense was successfully created.'
         end
         format.json { render :show, status: :created, location: @expense }
       else
@@ -69,8 +75,12 @@ class ExpensesController < ApplicationController
     @expense = Expense.find(params[:id])
   end
 
+  def set_category
+    @category = current_user.categories.find(params[:category_id])
+  end
+
   # Only allow a list of trusted parameters through.
   def expense_params
-    params.require(:expense).permit(:name, :amount)
+    params.require(:expense).permit(:name, :amount, category_ids: [])
   end
 end
