@@ -23,7 +23,6 @@ class ExpensesController < ApplicationController
   # POST /expenses or /expenses.json
   def create
     @expense = @category.expenses.new(expense_params.merge(user_id: current_user.id))
-    
     respond_to do |format|
       if @expense.save
         format.html do
